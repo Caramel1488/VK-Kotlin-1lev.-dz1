@@ -1,5 +1,6 @@
 package com.example.dz1
 
+import android.util.Log
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.DefaultLifecycleObserver
@@ -21,7 +22,7 @@ class AutoClearedValue<T : Any>(val fragment: Fragment) : ReadWriteProperty<Frag
             override fun onCreate(@NonNull owner: LifecycleOwner) {
                 fragment.viewLifecycleOwnerLiveData.observe(fragment) { viewLifecycleOwner ->
                     viewLifecycleOwner?.lifecycle?.addObserver(object : DefaultLifecycleObserver {
-                        override fun onDestroy(owner: LifecycleOwner) {
+                        override fun onPause(owner: LifecycleOwner) {
                             _value = null
                         }
                     })
