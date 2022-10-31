@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/numberTextView"
-        android:layout_width="100px"
-        android:layout_height="100px"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         tools:text="1"
         android:textColor="@color/black"
         android:gravity="center"
