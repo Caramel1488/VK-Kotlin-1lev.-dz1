@@ -10,7 +10,7 @@ class VM(state: SavedStateHandle): ViewModel() {
     private val savedStateHandle = state
 
     private val _number: MutableLiveData<Int> = savedStateHandle.getLiveData(KEY_NUMBER)
-    val number: LiveData<Int> = _number
+    private val number: LiveData<Int> = _number
 
     private val _numberList = MutableLiveData<List<Int>>()
     val numberList: LiveData<List<Int>> = _numberList
